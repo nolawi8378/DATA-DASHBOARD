@@ -1,0 +1,96 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header button {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.filters, .filters label, .filters button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+
+button.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-theme header {
+    background-color: #555;
+}
+
+.dark-theme header button {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-theme table, .dark-theme th, .dark-theme td {
+    border-color: #555;
+}

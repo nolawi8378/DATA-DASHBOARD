@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Data Dashboard</h1>
+            <button id="themeSwitcher">Switch Theme</button>
+        </header>
+        <section>
+            <h2>Filter Options</h2>
+            <div class="filters">
+                <label>
+                    Product Name:
+                    <input type="text" id="filterProduct">
+                </label>
+                <label>
+                    Region:
+                    <input type="text" id="filterRegion">
+                </label>
+                <label>
+                    Start Date:
+                    <input type="date" id="startDate">
+                </label>
+                <label>
+                    End Date:
+                    <input type="date" id="endDate">
+                </label>
+                <label>
+                    Min Sales Amount:
+                    <input type="number" id="minSales">
+                </label>
+                <label>
+                    Max Sales Amount:
+                    <input type="number" id="maxSales">
+                </label>
+                <button id="applyFilters">Apply Filters</button>
+            </div>
+        </section>
+        <section>
+            <h2>Dataset Selection</h2>
+            <label>
+                Select Dataset:
+                <select id="dataset">
+                    <option value="salesData">Sales Data</option>
+                    <option value="anotherData">Another Data</option>
+                </select>
+            </label>
+        </section>
+        <section>
+            <h2>Data Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th data-column="productName">Product Name</th>
+                        <th data-column="salesAmount">Sales Amount</th>
+                        <th data-column="salesDate">Sales Date</th>
+                        <th data-column="region">Region</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Details</h2>
+            <div id="detailsContent">
+                <!-- Details will be shown here -->
+            </div>
+        </section>
+        <section>
+            <h2>Add New Data</h2>
+            <form id="dataForm">
+                <label>
+                    Product Name:
+                    <input type="text" id="newProductName" required>
+                </label>
+                <label>
+                    Sales Amount:
+                    <input type="number" id="newSalesAmount" required>
+                </label>
+                <label>
+                    Sales Date:
+                    <input type="date" id="newSalesDate" required>
+                </label>
+                <label>
+                    Region:
+                    <input type="text" id="newRegion" required>
+                </label>
+                <button type="submit">Add Data</button>
+            </form>
+        </section>
+        <section>
+            <h2>Charts</h2>
+            <canvas id="barChart"></canvas>
+            <canvas id="lineChart"></canvas>
+            <canvas id="pieChart"></canvas>
+        </section>
+        <section>
+            <button id="exportData">Export Data to CSV</button>
+        </section>
+    </div>
+</body>
+</html>
